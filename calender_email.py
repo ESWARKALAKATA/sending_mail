@@ -1,3 +1,11 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+
+@author: eswar
+"""
+
+
 import email
 import smtplib
 import datetime as dt
@@ -74,13 +82,13 @@ def send_appointment(date, attendee_email, organiser_email, subj, description, l
   # Send the email out
   s = smtplib.SMTP('smtp.gmail.com',587)
   s.starttls()
-  s.login("eswar.bbid@gmail.com","eswar@1234")
+  s.login("eswar.bbid@gmail.com","eswar@1")   #please dont miss use it
   s.sendmail(msg["From"], [msg["To"]], msg.as_string())
   s.quit()
 
 
 
-send_appointment(date = today,attendee_email="eswar.kalakata@gmail.com",organiser_email="eswar.bbid@gmail.com",subj="python_practice",description="outlook calender should be done ",location="madhapur",start_hour= 1, start_minute= 55)
+send_appointment(date = today,attendee_email="eswar.kalakata@gmail.com",organiser_email="eswar.bbid@gmail.com",subj="python_practice",description="outlook calender should be done ",location="kadapa",start_hour= 1, start_minute= 55)
 '''import pytz
 for tz in pytz.all_timezones:
     print(tz)'''
